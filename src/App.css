@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main-container {
+  max-width: 80vw;
+  max-height: 80vh;
+  border: 1px solid red;
+  margin: auto;
+}
+
+.title-container {
+  margin-top: 5vh;
+}
