@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import DataForm from "./components/Form/FormData";
 import Senha from "./services/GerarSenha";
-import PasswordForm from "./components/Form/PasswordHolder/PasswordHolder";
+import PasswordForm from "./components/PasswordHolder/PasswordHolder";
 
 export interface CheckboxValue {
   id: string;
@@ -25,16 +25,17 @@ function App() {
     <>
       <div className="main-container">
         <div className="title-container">
-          <h1>Gerador de senhas</h1>
+          <h1 className="title">Gerador de senhas</h1>
         </div>
+        <div className="data-container">
+          <PasswordForm password={password} />
 
-        <DataForm
-          setPassword={setPassword}
-          values={values}
-          setValues={setValues}
-        />
-
-        <PasswordForm password={password} />
+          <DataForm
+            setPassword={setPassword}
+            values={values}
+            setValues={setValues}
+          />
+        </div>
       </div>
     </>
   );

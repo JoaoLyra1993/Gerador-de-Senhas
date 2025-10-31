@@ -1,5 +1,6 @@
 import Senha from "../../services/GerarSenha";
 import type { CheckboxValue } from "../../App";
+import "./FormData.css";
 
 interface DataFormProps {
   setPassword: (valor: string) => void;
@@ -27,10 +28,13 @@ const DataForm = ({ setPassword, values, setValues }: DataFormProps) => {
   };
 
   return (
-    <div>
-      <form action="">
-        <p>Selecione uma ou mais opções:</p>
-        <label>
+    <div className="form-container">
+      <form className="form-data">
+        <p className="paragraph">
+          Crie sua senha segura e personalizada, bastar selecionar uma ou mais
+          opções:
+        </p>
+        <label className="all-lables">
           <input
             type="checkbox"
             id="check2"
@@ -40,7 +44,7 @@ const DataForm = ({ setPassword, values, setValues }: DataFormProps) => {
           />
           Letras maiúsculas e minúsculas
         </label>
-        <label>
+        <label className="all-lables">
           <input
             type="checkbox"
             id="check3"
@@ -50,7 +54,7 @@ const DataForm = ({ setPassword, values, setValues }: DataFormProps) => {
           />
           Contendo números
         </label>
-        <label>
+        <label className="all-lables">
           <input
             type="checkbox"
             id="check4"
@@ -60,8 +64,9 @@ const DataForm = ({ setPassword, values, setValues }: DataFormProps) => {
           />
           Caracteres especiais
         </label>
-        <label>
+        <label className="all-lables">
           <input
+            className="checkbox"
             type="checkbox"
             id="check1"
             onChange={(e) => {
@@ -70,8 +75,12 @@ const DataForm = ({ setPassword, values, setValues }: DataFormProps) => {
           />
           Mais de 12 caracteres
         </label>
-
-        <button onClick={handleFormClick}>Gerar</button>
+        <p className="paragraph center">Clique no botão abaixo para gerar.</p>
+        <div className="div-but">
+          <button onClick={handleFormClick} className="bt-gen-pass">
+            Gerar
+          </button>
+        </div>
       </form>
     </div>
   );

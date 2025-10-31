@@ -24,14 +24,11 @@ const Senha = (
   let password = "";
 
   //Gera uma quantidade aleatória de tamanho da senha
-  let passwordLenght = longa
+  const passwordLenght = longa
     ? Math.floor(Math.random() * (maxLonga - minLonga + 1)) + minLonga
     : Math.floor(Math.random() * (maxCurta - minCurta + 1)) + minCurta;
 
-  // Garante que a senha tenha um tamanho par
-  passwordLenght =
-    passwordLenght % 2 == 0 ? passwordLenght : passwordLenght + 1;
-
+  //Preenche a senha de maneira aleatória
   for (let i = 0; i < passwordLenght; i++) {
     const indice = Math.floor(Math.random() * characters.length);
     password += characters[indice];

@@ -1,0 +1,60 @@
+.form-container {
+  display: flex;
+  max-height: 90vh;
+  max-width: 90vw;
+  border-radius: 10px;
+  margin: 2vh auto;
+}
+.paragraph {
+  margin: 1vh 0;
+}
+
+.center {
+  align-self: center;
+}
+
+@media (max-width: 600px) {
+  .paragraph {
+    font-size: 0.9rem;
+  }
+  .center {
+    align-self: center;
+  }
+  .all-lables {
+    display: flex;
+    gap: 1vw;
+    margin: 0.5vh 0;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  margin: 1vh auto;
+}
+
+.all-lables {
+  display: flex;
+  gap: 1vw;
+  margin: 0.5vh 0;
+  flex-wrap: wrap;
+}
+
+.div-but {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bt-gen-pass {
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  padding: 0.5vh 6vw;
+}
+
+.bt-gen-pass:hover {
+  background-color: #e2e2e2;
+}
